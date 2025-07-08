@@ -52,7 +52,6 @@
         /tool fetch upload=yes url=("sftp://" . $sftpaddress . ":" . $sftpport . "/" . $sftpFolder . "/" . $backupFile) user="$sftpUser" password="$sftpPass" src-path=("/" . $backupFile);
     }
 
-    :delay $delaySeconds
 
     :log info "Sending Mail"
     :local files {$backupFile;$configFile}
